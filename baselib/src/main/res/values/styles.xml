@@ -1,0 +1,72 @@
+<resources>
+
+
+
+    <style name="BaseDialogStyle" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 还可以加入一些弹出和退出的动画 (lan)-->
+        <!--动画-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+
+    <style name="BaseBottomDialogStyle"  parent="BaseDialogStyle">
+        <item name="android:windowEnterAnimation">@anim/input_method_enter</item>
+        <item name="android:windowExitAnimation">@anim/input_method_exit</item>
+    </style>
+    <style name="BaseRightDialogStyle"  parent="BaseDialogStyle">
+        <item name="android:windowEnterAnimation">@anim/right_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/right_dialog_exit</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <!-- 通用按钮 - 透明 -->
+
+    <!-- 通用按钮 - 填充 底部 无圆角-->
+
+    <!-- 通用按钮 - 填充 底部 无圆角-->
+
+    <!-- 通用按钮 - 填充 -->
+    <!-- 通用按钮 - 填充 -->
+
+    <!-- 通用按钮- 描边 -->
+
+
+    <style name="DefaultTitleTextStyle">
+<!--        <item name="android:textAppearance">@style/TextAppearance.Bold</item>-->
+        <item name="android:textSize">@dimen/text_size17</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+
+    <!--自定义dialog背景全透明无边框theme -->
+
+
+</resources>

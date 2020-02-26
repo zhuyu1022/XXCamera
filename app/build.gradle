@@ -1,0 +1,142 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('leqi.properties').newDataInputStream())
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.leqi.xxcamera"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    /**签名打包配置**/
+    signingConfigs {
+        debug {
+            keyPassword properties['keyPassword']
+            storePassword properties['storePassword']
+            storeFile rootProject.file(properties['storeFile'])
+            keyAlias properties['keyAlias']
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            keyPassword properties['keyPassword']
+            storePassword properties['storePassword']
+            storeFile rootProject.file(properties['storeFile'])
+            keyAlias properties['keyAlias']
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    /***配置打包名称*/
+    applicationVariants.all { variant ->
+        def buildType = variant.buildType.name
+        def flavorName = variant.flavorName
+        def createTime = new Date().format("YYYY-MM-dd", TimeZone.getTimeZone("GMT+08:00"))
+        variant.outputs.all {
+            outputFileName = flavorName + "_" + buildType + "_v" + defaultConfig.versionName + "_" + createTime + ".apk"
+        }
+    }
+    //vest 第一维度  market 第二维度
+    flavorDimensions "vest", "market"
+    productFlavors {
+        Changkuan {
+            dimension "vest"
+            manifestPlaceholders['APP_LOGO'] = "@mipmap/logo_new"
+        }
+        huawei {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+        oppo {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+        vivo {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+        xiaomi {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+
+        }
+        yyb {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+        sougou {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+        meizu {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+        chuizi {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+        baidu {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+        "360" {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+        wandoujia {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+        anzhi {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+
+        others {
+            dimension "market"
+            manifestPlaceholders['APP_NAME'] = "@string/app_name"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(path: ':baselib')
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--设置主题色-->
+    <color name="colorPrimary">#FFFFFF</color>
+    <!--更改状态栏颜色-->
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#5400F7</color>
+    <color name="colorRipple">#555555</color>
+
+
+    <color name="navBackgroundColor">#16202F</color>
+    <color name="navCheckedTrue">#438BF9</color>
+    <color name="navCheckedFalse">#5C636E</color>
+    <!--用于APP背景浅灰色-->
+    <!--APP辅色，用于背景按钮-->
+    <!--APP辅色，按钮按下的颜色-->
+    <!--用于重要级文字信息，内页标题信息-->
+    <!--用于普通文字段落，辅助文字信息-->
+    <!--用于默认未点击，次要文字信息-->
+    <!--用于输入框内提示文本-->
+    <!--用于分割线标签描边-->
+    <!--ripple颜色-->
+    <color name="colorCCCCCC">#CCCCCC</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorTransparent">#00000000</color>
+
+    <color name="colorE7E7E7">#50E7E7E7</color>
+
+
+</resources>
