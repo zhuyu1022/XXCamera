@@ -10,25 +10,20 @@ import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
 
 
-open class BasePresenter<V> : CoroutineScope {
-    /**job用于控制协程,后面launch{}启动的协程,返回的job就是这个job对象*/
-    private lateinit var job: Job
-    /**继承CoroutineScope必须初始化coroutineContext变量 ,这个是标准写法,+其实是plus方法前面表示job,用于控制协程,后面是Dispatchers,指定启动的线程*/
-    override val coroutineContext: CoroutineContext
-        get() = job.plus(Dispatchers.Main)
+abstract class BasePresenter<V> {
+
 
     var mvpView: V? = null
 
     private var mCompositeDisposable: CompositeDisposable? = null
 
-    fun attachView(view: V) {
+    open fun attachView(view: V) {
         this.mvpView = view
-        job = Job()
+
     }
 
-    fun detachView() {
+    open fun detachView() {
         this.mvpView = null
-        job.cancel() //结束当前协程
         unDispose()//解除订阅
     }
 

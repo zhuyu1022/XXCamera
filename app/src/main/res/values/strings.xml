@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">XXCamera</string>
+    <string name="app_name">职业形象照</string>
+
+    <!--反馈页面-->
+    <string name="feedback_title">产品问题反馈</string>
+    <string name="immediate_feedback">立即反馈</string>
+    <string name="feedback_content_hint">简要的描述您要反馈的问题和意见，需大于10个字，客服问题可联系在线客服快速解决哦。</string>
+    <string name="feedback_contact_information_hint">请留下您的联系方式，我们会将反馈问题解决进展。</string>
+    <!--拍照界面-->
+    <string name="camera_activity_too_large_photo">图片文件过大，无法进行正常检测，请换其他相片</string>
+    <string name="camera_activity_null_data_photo">选择的图片为空文件，请重新选择</string>
 </resources>

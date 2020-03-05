@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="78dp"
+    android:layout_height="74dp"
+    android:layout_marginStart="10dp"
+    android:background="@drawable/bg_corner_spec_select">
+
+    <TextView
+        android:id="@+id/specNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff534ece"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/pxSizeTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="一寸" />
+
+    <TextView
+        android:id="@+id/pxSizeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff534ece"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/specNameTv"
+        tools:text="295×413px" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

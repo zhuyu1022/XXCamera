@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_dialog_grey"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shareQQLayout"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginTop="@dimen/dp_50"
+        android:background="@drawable/bg_corner_white_ripple_6"
+        app:layout_constraintEnd_toStartOf="@id/shareWechatLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView78"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/qq" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView88"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="QQ"
+        android:textColor="@color/normalTextColor"
+        android:textSize="@dimen/sp_13"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/shareQQLayout"
+        app:layout_constraintStart_toStartOf="@+id/shareQQLayout"
+        app:layout_constraintTop_toBottomOf="@+id/shareQQLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shareWechatLayout"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="@dimen/dp_56"
+
+        android:layout_marginTop="@dimen/dp_50"
+
+        android:background="@drawable/bg_corner_white_ripple_6"
+        app:layout_constraintEnd_toStartOf="@+id/sharePengyouLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shareQQLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/wechat" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="微信"
+        android:textColor="@color/normalTextColor"
+        android:textSize="@dimen/sp_13"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/shareWechatLayout"
+        app:layout_constraintStart_toStartOf="@+id/shareWechatLayout"
+        app:layout_constraintTop_toBottomOf="@+id/shareWechatLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sharePengyouLayout"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginTop="@dimen/dp_50"
+        android:background="@drawable/bg_corner_white_ripple_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shareWechatLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/pengyou" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="朋友圈"
+        android:textColor="@color/normalTextColor"
+        android:textSize="@dimen/sp_13"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/sharePengyouLayout"
+        app:layout_constraintStart_toStartOf="@+id/sharePengyouLayout"
+        app:layout_constraintTop_toBottomOf="@+id/sharePengyouLayout" />
+
+    <TextView
+        android:id="@+id/cancelTv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_32"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="取消"
+        android:elevation="10dp"
+        android:textSize="@dimen/sp_16"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

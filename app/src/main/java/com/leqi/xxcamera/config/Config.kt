@@ -1,18 +1,20 @@
 package com.leqi.lwcamera.config
 
 import android.os.Environment
+import com.huantansheng.easyphotos.models.album.AlbumModel
+import com.leqi.lwcamera.model.bean.apiV2.ManufactureRequestBean
 
 
 /**
  * 全部配置类
  */
 object Config {
-    const val APP_NAME = "长宽相机"
+    const val APP_NAME = "职业形象照"
     const val BASE_URL = "https://api.id-photo-verify.com/api/V2/"
     //长宽相机的APP_KEY
-    const val APP_ID = "CHANGKUAN_PHOTO"
+    //const val APP_ID = "CHANGKUAN_PHOTO"
     //研究院
-    // const val APP_ID = "ID_PHOTO_VERIFY"
+    const val APP_ID = "ID_PHOTO_VERIFY"
     var USERKEY = ""
     //电子照价格  默认 *
     var electronic = 300
@@ -30,7 +32,7 @@ object Config {
     var changeClothePrintPrice = 0
     var changeClotheMultiBackgroundPrice: Int = 0
     var showClothe = true
-   // var defaultBeautyLevel = ManufactureRequestBean.FairLevel()
+    var defaultBeautyLevel = ManufactureRequestBean.FairLevel()
     var serverBeautyVersion = 1000
     var clientBeautyVersion = 1000
     var onLineBeauty = true
@@ -53,8 +55,10 @@ object Config {
     const val PAY_RULE_URL = "http://www.id-photo-verify.com/payrule"
     const val JSON_TYPE = "application/json; charset=utf-8"
 
-    const val imgWechat = "https://leqi-app.oss-cn-shanghai.aliyuncs.com/IDPhotoApp/%E5%88%86%E4%BA%AB%E5%9B%BE-%E5%BE%AE%E4%BF%A1.jpg"
-    const val imgWeibo = "https://leqi-app.oss-cn-shanghai.aliyuncs.com/IDPhotoApp/%E5%88%86%E4%BA%AB%E5%9B%BE-%E5%BE%AE%E5%8D%9A.jpg"
+    const val imgWechat =
+        "https://leqi-app.oss-cn-shanghai.aliyuncs.com/IDPhotoApp/%E5%88%86%E4%BA%AB%E5%9B%BE-%E5%BE%AE%E4%BF%A1.jpg"
+    const val imgWeibo =
+        "https://leqi-app.oss-cn-shanghai.aliyuncs.com/IDPhotoApp/%E5%88%86%E4%BA%AB%E5%9B%BE-%E5%BE%AE%E5%8D%9A.jpg"
     //隐私协议
     const val PRIVACY_URL = "https://id-photo-verify.com/privacy-ckkz/"
     //用户协议
@@ -69,5 +73,8 @@ object Config {
     var phoneNumber: String = "18012485542"
     var printNumber: String = "18020506879"
     var weChatId: String = "idphoto2017"
+
+
+    const val ALBUM = 100
 
 }

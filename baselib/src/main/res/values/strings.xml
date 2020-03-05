@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BaseLib</string>
+
+    <!--dialog-->
+    <string name="dialog_title_local">提示</string>
+    <string name="dialog_btn_positive">确定</string>
+    <string name="dialog_btn_negative">取消</string>
 </resources>

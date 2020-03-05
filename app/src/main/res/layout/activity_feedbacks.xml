@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normalLayoutColor"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="反馈内容"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="@dimen/sp_17"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="（必填）"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="@dimen/sp_12"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/feedback_content_et"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/bg_corner_light_grey"
+                android:gravity="top"
+                android:hint="@string/feedback_content_hint"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:maxLength="140"
+                android:maxLines="7"
+                android:minLines="1"
+                android:padding="12dp"
+                android:textColor="@color/normalTextColor"
+                android:textColorHint="@color/textGray"
+                android:textSize="14sp"
+                tools:targetApi="o" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上传图片"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="@dimen/sp_17"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="（选填，不超过4张）"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="@dimen/sp_12"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="25dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/feedback_upPhotot_recyclerview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_up_photo" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系方式"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="@dimen/sp_17"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="（必填）"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="@dimen/sp_12"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/feedback_contact_infor_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/bg_corner_light_grey"
+                android:gravity="start"
+                android:hint="@string/feedback_contact_information_hint"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:maxLength="23"
+                android:maxLines="3"
+                android:minLines="1"
+                android:paddingStart="12dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/normalTextColor"
+                android:textColorHint="@color/textGray"
+                android:textSize="14sp"
+                tools:targetApi="o" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                android:drawableStart="@mipmap/icon_info"
+                android:drawablePadding="8dp"
+                android:text="不填写联系方式，就收不到反馈进展哦~"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/feedback_send_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_corner_button_disable"
+        android:text="@string/immediate_feedback"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_17" />
+
+
+</LinearLayout>

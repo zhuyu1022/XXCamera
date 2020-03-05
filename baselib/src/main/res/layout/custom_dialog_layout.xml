@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/base_bg_corner_dialog_white"
+
+    >
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_280"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_title_local"
+                android:textColor="@color/dialogNormalTextColor"
+                android:textSize="@dimen/sp_17"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/messageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_16"
+            tools:text="这里是文本内容"
+            android:textSize="@dimen/sp_13" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@color/baseLineColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/leftBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/limited_ripple_bg"
+                android:text="@string/dialog_btn_positive"
+                android:textColor="@color/dialogNormalTextColor"
+                android:textSize="@dimen/sp_17"
+                android:textStyle="bold"
+
+                />
+
+            <View
+                android:id="@+id/lineCenter"
+                android:layout_width="@dimen/dp_0_5"
+                android:layout_height="match_parent"
+
+                android:background="@color/baseLineColor" />
+
+            <Button
+                android:id="@+id/rightBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/limited_ripple_bg"
+                android:text="@string/dialog_btn_negative"
+                android:textColor="@color/dialogNormalTextColor"
+                android:textSize="@dimen/sp_17"
+                android:textStyle="bold"
+                tools:ignore="ButtonStyle" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -47,17 +47,6 @@
 
     </style>
 
-    <!-- 通用按钮 - 透明 -->
-
-    <!-- 通用按钮 - 填充 底部 无圆角-->
-
-    <!-- 通用按钮 - 填充 底部 无圆角-->
-
-    <!-- 通用按钮 - 填充 -->
-    <!-- 通用按钮 - 填充 -->
-
-    <!-- 通用按钮- 描边 -->
-
 
     <style name="DefaultTitleTextStyle">
 <!--        <item name="android:textAppearance">@style/TextAppearance.Bold</item>-->
